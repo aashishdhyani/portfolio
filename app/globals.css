@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0f1115;
+  color: #e9eaee;
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #7fb3ff;
+  outline-offset: 3px;
+}
+
+/* Portfolio component styles.
+   Kept here (not as an inline <style> in the component) because a raw
+   <style>{'...'}</style> block whose text contains quote characters gets
+   HTML-entity-encoded differently on the server than on the client,
+   which causes a React hydration mismatch. Static CSS belongs in a
+   stylesheet, not in component JSX. */
+.nav-link {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  color: #9aa1ad;
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: #e9eaee;
+}
+.nav-link.active {
+  color: #e9eaee;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: #e7b85c;
+  border-radius: 2px;
+}
+.chip-hover {
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.chip-hover:hover {
+  border-color: #e7b85c;
+  transform: translateY(-2px);
+}
+@media (min-width: 861px) {
+  .desktop-cta {
+    display: inline-flex !important;
+  }
+  .mobile-toggle {
+    display: none !important;
+  }
+}
+@media (max-width: 860px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+}
+@media (max-width: 500px) {
+  .focus-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
