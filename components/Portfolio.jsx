@@ -350,24 +350,28 @@ export default function Portfolio() {
         <section id="about" style={{ padding: "96px 0" }}>
           <Reveal>
             <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", gap: "56px", alignItems: "start" }} className="about-grid">
-              <div
-                style={{
-                  width: 180,
-                  height: 180,
-                  borderRadius: 16,
-                  background: "linear-gradient(160deg, #1D2129, #171A20)",
-                  border: "1px solid #262B34",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: "3.4rem",
-                  fontWeight: 700,
-                  color: "#E7B85C",
-                }}
-              >
-                AD
-              </div>
+<div
+  style={{
+    width: 180,
+    height: 220,
+    borderRadius: 16,
+    overflow: "hidden",
+    border: "1px solid #262B34",
+    background: "#171A20",
+  }}
+>
+  <img
+    src="profile.jpg"
+    alt="Aashish Dhyani"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center 20%",
+      display: "block",
+    }}
+  />
+</div>
               <div>
                 <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(1.5rem, 3vw, 1.9rem)", marginBottom: "28px" }}>About</h2>
                 <p style={{ color: "#9AA1AD", marginBottom: 16 }}>
